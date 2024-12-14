@@ -1,5 +1,6 @@
 package com.ott.ott_service.model.member;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import jakarta.persistence.*;
@@ -36,5 +37,5 @@ public class Payment {
     private String cardName;
 
     @Column(name = "amount", nullable = false)
-    private double amount;
+    private BigDecimal amount;
 }
