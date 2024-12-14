@@ -9,6 +9,7 @@ public enum ErrorMessage {
     UNEXPECTED_ERROR("예상치 못한 오류가 발생했습니다."),
     DATABASE_ACCESS_ERROR("데이터베이스 접근 중 오류가 발생했습니다."),
     NOT_FOUND_ERROR("요청한 리소스를 찾을 수 없습니다."),
+    DUPLICATE_DATA_ERROR("중복된 데이터입니다."),
     UNAUTHORIZED_ERROR("이 작업을 수행할 권한이 없습니다.");
 
     private final String message;

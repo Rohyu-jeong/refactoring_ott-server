@@ -63,4 +63,10 @@ public class GlobalExceptionHandler {
         log.warn("Unauthorized Exception: {}", ex.getMessage());
         return ResponseEntity.status(HttpStatus.FORBIDDEN).body(ErrorMessage.UNAUTHORIZED_ERROR.getMessage());
     }
+
+    @ExceptionHandler(DuplicateDataException.class)
+    public ResponseEntity<String> handleAlreadyExistsException(DuplicateDataException ex) {
+        log.warn("DuplicateDataException: {}", ex.getMessage());
+        return ResponseEntity.status(HttpStatus.CONFLICT).body(ErrorMessage.DUPLICATE_DATA_ERROR.getMessage());
+    }
 }
