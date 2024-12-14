@@ -16,6 +16,7 @@ public class Membership {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
+    @Enumerated(EnumType.STRING) //todo 없애도될지도
     @Column(name = "level", unique = true, nullable = false, length = 50)
     private String level;
 
